@@ -1,0 +1,29 @@
+{
+  "kind": "collectionType",
+  "collectionName": "faqs",
+  "info": {
+    "singularName": "faq",
+    "pluralName": "faqs",
+    "displayName": "FAQ",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "embedding": {
+      "type": "relation",
+      "relation": "morphOne",
+      "target": "plugin::open-ai-embeddings.embedding",
+      "morphBy": "related",
+      "configurable": false
+    },
+    "question": {
+      "type": "string"
+    },
+    "content": {
+      "type": "richtext"
+    }
+  }
+}
